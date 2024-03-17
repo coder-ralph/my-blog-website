@@ -86,17 +86,16 @@ const Posts = ({ posts }) => {
                   <FaTwitter /> Share to Twitter
                 </button>
               </div>
-              {/* You can add more share buttons for other platforms here */}
             </div>
 
             {/* Open Graph Meta Tags */}
-            <meta property="og:url" content={`/article/${post.slug}`} />
+            <meta property="og:url" content={`https://ralph-rosael-techblogs.vercel.app/article/${post.slug}`} />
             <meta property="og:image" content={post.coverPhoto.url} />
             <meta property="og:title" content={post.title} />
             <meta property="og:description" content={post.description} />
 
             {/* Twitter Card Meta Tags */}
-            <meta name="twitter:url" content={`/article/${post.slug}`} />
+            <meta name="twitter:url" content={`https://ralph-rosael-techblogs.vercel.app/article/${post.slug}`} />
             <meta name="twitter:image" content={post.coverPhoto.url} />
             <meta name="twitter:title" content={post.title} />
             <meta name="twitter:description" content={post.description} />
