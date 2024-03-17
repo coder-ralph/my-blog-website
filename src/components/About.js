@@ -28,13 +28,13 @@ const About = () => {
         <img src={programmerImage} alt="Top Section" title="Programmer GIF" />
       </div>
 
-      <h2>Greetings, I'm Eli Ralph Rosael,</h2>
+      <h2>Greetings, I'm Ralph Rosael,</h2>
       <p>
-        a graduating student on the verge of earning myBachelor of Science in Information Systems – been a wild ride! I live in Tibiao, Antique, 
-        and I come from a family of four. When I'm not buried in academics, I'm into basketball, badminton, and doodling away. For most of myfree 
-        time, I indulge myself in mobile games such as Clash of Clans, Valorant, and Mobile Legends. They are my go-to stress busters, they keep 
-        me sane and connect with friends in the virtual space. Now, let's talk coding– I'm all about that programming life. I’m a self-taught developer 
-        and I’m quite passionate about honing my skills in programming so I’m always digging into online resources to up mygame.Onething I’ve realized 
+        a graduating student on the verge of earning my Bachelor of Science in Information Systems – been a wild ride! I live in Tibiao, Antique, 
+        and I come from a family of four. When I'm not buried in academics, I'm into basketball, badminton, and doodling away. For most of my free 
+        time, I indulge myself in mobile games such as Clash of Clans, CS:GO, Valorant, and Mobile Legends. They are my go-to stress busters, they keep 
+        me sane and connect with friends in the virtual space. Now, let's talk coding – I'm all about that programming life. I’m a self-taught developer 
+        and I’m quite passionate about honing my skills in programming so I’m always digging into online resources to up my game. One thing I’ve realized 
         these days, I’m forever learning especially in this field.
       </p>
     </div>
