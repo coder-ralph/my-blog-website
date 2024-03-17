@@ -38,6 +38,27 @@ const Comments = ({ comments }) => {
     setLoading(false);
   }
 
+  // Function to format the date
+  const formatDate = (createdAt) => {
+    const options = {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+      hour12: true,
+    };
+    return new Date(createdAt).toLocaleString('en-US', options);
+  };
+
+  // Log the createdAt values
+  useEffect(() => {
+    console.log('Comments:', comments);
+    comments.forEach(comment => {
+      console.log('createdAt:', comment.createdAt);
+    });
+  }, [comments]);
+
   return (
     <div className="comments">
       <div className="comment-form-container">
@@ -89,7 +110,7 @@ const Comments = ({ comments }) => {
           </button>
         </form>
       </div>
-      <div className="published-comments-container">
+      <div className="published-comments-container" style={{ maxHeight: '400px', overflowY: 'auto' }}>
         <h2>
           {comments.length} {comments.length === 1 ? 'Comment' : 'Comments'}
         </h2>
@@ -98,17 +119,10 @@ const Comments = ({ comments }) => {
         <div className="content" key={comment.id}>
           <strong>
             <i className="fa-solid fa-user"></i> {comment.name}
-              <span style={{ marginLeft: '5px', fontSize: '0.9rem' }}>
-                on {new Date(comment.createdAt).toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'short',
-                day: 'numeric',
-              })}, {new Date(comment.createdAt).toLocaleTimeString('en-US', {
-                hour: '2-digit',
-                minute: '2-digit',
-              })}
-              </span>
-          </strong>
+                  <span style={{ marginLeft: '5px', fontSize: '0.9rem' }}>
+                    on {formatDate(comment.createdAt)}
+                  </span>
+            </strong>
             <p>{comment.comment}</p>
           </div>
         ))}
