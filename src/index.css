@@ -878,10 +878,8 @@ footer {
     display: block;
     margin-right: 20px;
     border-radius: 5px;
-    background: linear-gradient(to right, #525CEB, #2b7ddf);
-    -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
+    color: white;
   }
 
   /* Adjust the menu lists for mobile */
@@ -892,7 +890,7 @@ footer {
     width: 100%;
     height: 60vh;
     z-index: 100;
-    background-color: #fff;
+    background-color: #525CEB;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
