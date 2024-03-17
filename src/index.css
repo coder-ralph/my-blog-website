@@ -11,7 +11,7 @@
 
 body {
   width: 100%;
-  background: #ffffff;
+  background: #f4f6f8;
 }
 
 a {
@@ -490,39 +490,35 @@ nav :is(.fa-bars, .fa-xmark) {
   }
 }
 
-/* Comments Container */
+/* Comments Section */
 .comments {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
 
-/* Comment Form Container */
 .comment-form-container {
-  width: 100%; /* Adjust the width as needed */
+  width: 100%;
   padding: 20px;
   /* border: 1px solid #ddd; */
   border-radius: 5px;
-  margin-right: 2%;  /* Adjust the spacing between the comment form and published comments */
+  margin-right: 2%;
   background-color: #fff;
 }
 
-/* Published Comments Container */
 .published-comments-container {
-  width: 100%; /* Adjust the width as needed */
+  width: 100%;
   padding: 20px;
   /* border: 1px solid #ddd; */
   border-radius: 5px;
   background-color: #fff;
 }
 
-/* Comments Title */
 .comments h2 {
   color: #333;
   padding: 5px 0;
 }
 
-/* Comments Form Input/Textarea Styles */
 .comments form :is(input, textarea) {
   width: 100%;
   border: 1px solid #ccc;
@@ -561,11 +557,11 @@ nav :is(.fa-bars, .fa-xmark) {
   letter-spacing: 1px;
   cursor: pointer;
   border-radius: 5px;
-  transition: background-color 0.3s; /* Add a smooth transition */
+  transition: background-color 0.3s;
 }
 
 .comments form button:hover {
-  background: #ff695e; /* Change the background color to pink on hover */
+  background: #ff695e;
 }
 
 /* Comments Content Styles */
