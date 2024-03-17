@@ -9,11 +9,13 @@ const category = `
   color { css }
 `
 
-const commnet = `
+const comment = `
   id,
   name,
   email,
-  comment
+  comment,
+  createdAt,
+  updatedAt
 `
 
 const post = `
@@ -117,7 +119,7 @@ export const QUERY_ONE_POST = gql`
         first: $limit, 
         skip: $skip,
       ){
-        ${commnet}
+        ${comment}
       }
     }
 
