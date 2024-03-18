@@ -249,10 +249,18 @@ nav :is(.fa-bars, .fa-xmark) {
   object-position: center;
 }
 
-/* .posts-img:hover img{
-  transition: all 1s linear;
-  filter: invert(1);
-} */
+.brighten img {
+  -webkit-filter: brightness(50%);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+  
+.brighten img:hover {
+  -webkit-filter: brightness(100%);
+}
 
 .posts-img .categories {
   position: absolute;
@@ -269,10 +277,10 @@ nav :is(.fa-bars, .fa-xmark) {
 }
 
 .posts-text h3 {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   text-transform: capitalize;
   color: #000000;
-  font-weight: 500;
+  font-weight: bold;
   margin: 5px 0;
   line-height: 25px;
   transition: all 0.3s linear;
@@ -297,10 +305,9 @@ nav :is(.fa-bars, .fa-xmark) {
 }
 
 .posts-text .excerpt {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #333;
-  justify-content: center;
-  text-align: center;
+  text-align: justify;
 }
 
 /* Title */
