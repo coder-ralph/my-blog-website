@@ -1,17 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaFacebook, FaTwitter, FaCalendar } from 'react-icons/fa';
+import { FaCalendar } from 'react-icons/fa';
 
 const Posts = ({ posts }) => {
-  const handleShareFacebook = (url, caption) => {
-    const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(caption)}`;
-    window.open(shareUrl, '_blank');
-  };
-
-  const handleShareTwitter = (url, text, caption) => {
-    const shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text + ' ' + caption)}`;
-    window.open(shareUrl, '_blank');
-  };
 
   const formatDate = (dateString) => {
     const options = { year: 'numeric', month: 'short', day: '2-digit' };
@@ -22,7 +13,7 @@ const Posts = ({ posts }) => {
     <div className='posts-container'>
       {posts?.map(post => (
         <div className="posts-box" key={post.id}>
-          <div className="posts-img">
+          <div className="posts-img brighten">
             <Link to={`/article/${post.slug}`}>
               <img src={post.coverPhoto.url} alt="" />
             </Link>
@@ -61,44 +52,6 @@ const Posts = ({ posts }) => {
             </Link>
 
             <p className='excerpt'>{post.description}</p>
-
-            <div className="share-buttons">
-              <div className="share-button">
-                <button
-                  className="dark-bg"
-                  onClick={() => handleShareFacebook(
-                    `/article/${post.slug}`,
-                    'Read this post.' // Short description for Facebook
-                  )}
-                >
-                  <FaFacebook /> Share to Facebook
-                </button>
-              </div>
-              <div className="share-button">
-                <button
-                  className="dark-bg"
-                  onClick={() => handleShareTwitter(
-                    `/article/${post.slug}`,
-                    post.title,
-                    'Read this post.' // Short description for Twitter
-                  )}
-                >
-                  <FaTwitter /> Share to Twitter
-                </button>
-              </div>
-            </div>
-
-            {/* Open Graph Meta Tags */}
-            <meta property="og:url" content={`https://ralph-rosael-techblogs.vercel.app/article/${post.slug}`} />
-            <meta property="og:image" content={post.coverPhoto.url} />
-            <meta property="og:title" content={post.title} />
-            <meta property="og:description" content={post.description} />
-
-            {/* Twitter Card Meta Tags */}
-            <meta name="twitter:url" content={`https://ralph-rosael-techblogs.vercel.app/article/${post.slug}`} />
-            <meta name="twitter:image" content={post.coverPhoto.url} />
-            <meta name="twitter:title" content={post.title} />
-            <meta name="twitter:description" content={post.description} />
           </div>
         </div>
       ))}
