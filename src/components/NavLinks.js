@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import Search from './Search';
 import '../index.css';
@@ -6,9 +6,7 @@ import '../index.css';
 const NavLinks = ({ categories }) => {
   const { pathname } = useLocation();
   const [submenuOpen, setSubmenuOpen] = useState(false);
-  const [setActiveMenuItem] = useState('');
-
-  // const [activeMenuItem, setActiveMenuItem] = useState('');
+  const submenuRef = useRef(null);
 
   useEffect(() => {
     if (pathname === '/' || pathname === '/about') {
@@ -20,17 +18,30 @@ const NavLinks = ({ categories }) => {
     }
   }, [pathname]);
 
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (submenuRef.current && !submenuRef.current.contains(event.target)) {
+        setSubmenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleOutsideClick);
+
+    return () => {
+      document.removeEventListener('mousedown', handleOutsideClick);
+    };
+  }, []);
+
   const toggleSubmenu = () => {
     setSubmenuOpen(!submenuOpen);
   };
 
-  const closeSubmenu = () => {
-    setSubmenuOpen(false);
+  const handleMenuItemClick = (menuItem) => {
+    closeSubmenu();
   };
 
-  const handleMenuItemClick = (menuItem) => {
-    setActiveMenuItem(menuItem);
-    closeSubmenu();
+  const closeSubmenu = () => {
+    setSubmenuOpen(false);
   };
 
   return (
@@ -42,7 +53,7 @@ const NavLinks = ({ categories }) => {
         <li>Home</li>
       </NavLink>
 
-      <li className={`submenu-item ${submenuOpen ? 'open' : ''}`}>
+      <li className={`submenu-item ${submenuOpen ? 'open' : ''}`} ref={submenuRef}>
         <div className='submenu-toggle' onClick={toggleSubmenu}>
           <span>Blogs</span>
           <i className={`fa-solid fa-chevron-${submenuOpen ? 'up' : 'down'}`} />
