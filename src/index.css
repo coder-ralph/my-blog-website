@@ -143,7 +143,7 @@ nav :is(.fa-bars, .fa-xmark) {
 
 .about-title {
   text-align: center;
-  color: #333;
+  color: black;
 }
 
 .about-me p {
@@ -530,6 +530,13 @@ nav :is(.fa-bars, .fa-xmark) {
   background-color: white;
   resize: vertical;
   max-height: 200px;
+  transition: border-color 0.3s;
+}
+
+.comment-form-container input:focus,
+.comment-form-container textarea:focus {
+  outline: none;
+  border-color: #525CEB;
 }
 
 .comments form input {
@@ -677,7 +684,7 @@ nav :is(.fa-bars, .fa-xmark) {
 
 .contact-form {
   flex: 1;
-  padding: 10px;
+  padding: 30px;
   background-color: #f7f7f7;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -944,3 +951,4 @@ footer {
     margin-bottom: 10px;
   }
 }
+
