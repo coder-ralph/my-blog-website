@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../index.css';
 
-import contactUsImage from '../images/contactus.png';
-
 const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -36,7 +34,7 @@ const Contact = () => {
     }
 
     // Generate the mailto link with subject and body
-    const mailtoLink = `mailto:touristique2023@gmail.com?subject=Tourist%20Questions%20or%20Inquiries 💬&body=${encodeURIComponent(message)}`;
+    const mailtoLink = `mailto:touristique2023@gmail.com?subject=Feel%20free%20to%20send%20me%20an%20email%20if%20you%20have%20any%20questions%20or%20inquiries! 💬&body=${encodeURIComponent(message)}`;
 
     // Try to open the email client
     const isOpened = window.open(mailtoLink, '_self');
@@ -60,7 +58,7 @@ const Contact = () => {
 
   return (
     <div className={`contact-container ${isFormVisible ? 'fade-in' : ''}`}>
-      <h2 style={{ textAlign: 'center', marginTop: 0 }}>Contact</h2>
+      <h1 style={{ textAlign: 'center', marginTop: 0 }}>Contact Me</h1>
       <div className="contact-content">
         <div className="contact-form">
           <form onSubmit={handleSubmit}>
@@ -103,14 +101,6 @@ const Contact = () => {
             {/* Submit button */}
             <button type="submit">Send</button>
           </form>
-        </div>
-        <div className="contact-illustration">
-          {/* Add your illustrator image here */}
-          <img
-            src={contactUsImage}
-            alt="ContactUs"
-            style={{ maxWidth: '100%', height: 'auto' }}
-          />
         </div>
       </div>
       {isSubmissionSuccessful && (
