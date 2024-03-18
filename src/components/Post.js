@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const Post = ({ post }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const options = { year: 'numeric', month: 'short', day: '2-digit' };
   const formattedDate = new Date(post.updatedAt).toLocaleDateString('en-US', options);
 
