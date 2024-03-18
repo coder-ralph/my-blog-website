@@ -63,7 +63,7 @@ const NavLinks = ({ categories }) => {
       </li>
 
       <NavLink to='/about' activeClassName='active' onClick={() => handleMenuItemClick('about')}>
-        <li>About</li>
+        <li>About Me</li>
       </NavLink>
       
       <NavLink to='/contact' activeClassName='active' onClick={() => handleMenuItemClick('contact')}>
