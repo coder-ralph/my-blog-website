@@ -6,6 +6,7 @@ import '../index.css';
 const NavLinks = ({ categories }) => {
   const { pathname } = useLocation();
   const [submenuOpen, setSubmenuOpen] = useState(false);
+  const [setActiveMenuItem] = useState('');
   const submenuRef = useRef(null);
 
   useEffect(() => {
@@ -37,6 +38,7 @@ const NavLinks = ({ categories }) => {
   };
 
   const handleMenuItemClick = (menuItem) => {
+    setActiveMenuItem(menuItem);
     closeSubmenu();
   };
 
