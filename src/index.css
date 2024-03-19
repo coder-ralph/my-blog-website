@@ -97,7 +97,7 @@ nav .menu-lists li:is(:hover, .active) {
   color: white;
   transition: all ease 0.3s;
   border-radius: 5px;
-  border: 1px dashed #2E4374;
+  /* border: 1px dashed #2E4374; */
 }
 
 nav :is(.fa-bars, .fa-xmark) {
@@ -279,13 +279,13 @@ nav :is(.fa-bars, .fa-xmark) {
 
 .posts-text h3 {
   font-size: 1.2rem;
-  text-transform: capitalize;
   color: #000000;
   font-weight: bold;
   margin: 5px 0;
   line-height: 25px;
   transition: all 0.3s linear;
   text-align: center;
+  /* text-transform: capitalize; */
 }
 
 .posts-text h3:hover {
@@ -445,20 +445,20 @@ nav :is(.fa-bars, .fa-xmark) {
 
 /* Post Box */
 .post-box {
-  background-color: #fff;
-  /* border: 1px solid #ddd; */
   border-radius: 5px;
   margin-bottom: 20px;
   padding: 20px;
-  margin-top: 30px; 
+  margin-top: 30px;
+  /* background-color: #fff; */
+  /* border: 1px solid #ddd; */
 }
 
 .post-box .title {
   text-align: center;
   font-size: 2rem;
-  text-transform: capitalize;
   color: #182848;
   margin-top: 20px;
+  /* text-transform: capitalize; */
 }
 
 .post-box .published-time {
@@ -510,18 +510,18 @@ nav :is(.fa-bars, .fa-xmark) {
 .comment-form-container {
   width: 100%;
   padding: 20px;
-  /* border: 1px solid #ddd; */
   border-radius: 5px;
   margin-right: 2%;
-  background-color: #fff;
+  /* background-color: #fff; */
+  border: 1px solid #ddd;
 }
 
 .published-comments-container {
   width: 100%;
   padding: 20px;
-  /* border: 1px solid #ddd; */
   border-radius: 5px;
-  background-color: #fff;
+  /* background-color: #fff; */
+  border: 1px solid #ddd;
 }
 
 .comments h2 {
