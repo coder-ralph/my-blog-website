@@ -18,7 +18,7 @@ const Header = () => {
       <input type="checkbox" id='menu-btn' hidden />
       <nav>
         <Link to="/" className="logo">
-          {/* <img src="/me.png" alt="Blog Logo" /> */}
+          <img src="/blogging.png" alt="Blogging Icon" />
           <span className="logo-text">TechBlog</span>
         </Link>
 
