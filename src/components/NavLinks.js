@@ -57,7 +57,7 @@ const NavLinks = ({ categories }) => {
 
       <li className={`submenu-item ${submenuOpen ? 'open' : ''}`} ref={submenuRef}>
         <div className='submenu-toggle' onClick={toggleSubmenu}>
-          <span>Blogs</span>
+          <span>Category</span>
           <i className={`fa-solid fa-chevron-${submenuOpen ? 'up' : 'down'}`} />
         </div>
         <ul className={`submenu ${submenuOpen ? 'open' : ''}`}>
