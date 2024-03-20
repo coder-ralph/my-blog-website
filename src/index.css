@@ -27,9 +27,18 @@ ul {
   color: #fff;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   display: none;
+} */
+
+/* ::-webkit-scrollbar {
+  width: 5px;
 }
+
+::-webkit-scrollbar-thumb {
+  background-color: #525CEB;
+  border-radius: 5px;
+} */
 
 main {
   width: 100%;
@@ -170,6 +179,7 @@ nav :is(.fa-bars, .fa-xmark) {
   max-width: 100%;
   height: auto;
   margin-top: 20px;
+  border-radius: 10px;
 }
 
 .about-image {
