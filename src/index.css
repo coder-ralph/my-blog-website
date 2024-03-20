@@ -259,7 +259,11 @@ nav :is(.fa-bars, .fa-xmark) {
   transition: all 1s ease;
 }
   
-.brighten img:hover {
+/* .brighten img:hover {
+  -webkit-filter: brightness(100%);
+} */
+
+.posts-box:hover .brighten img {
   -webkit-filter: brightness(100%);
 }
 
@@ -288,7 +292,11 @@ nav :is(.fa-bars, .fa-xmark) {
   /* text-transform: capitalize; */
 }
 
-.posts-text h3:hover {
+/* .posts-text h3:hover {
+  color: #525CEB;
+} */
+
+.posts-box:hover .posts-text h3 {
   color: #525CEB;
 }
 
