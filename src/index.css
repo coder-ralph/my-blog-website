@@ -85,11 +85,11 @@ nav .menu-lists {
 
 nav .menu-lists li {
   position: relative;
-  padding: 5px 15px;
+  padding: 5px 10px;
   color: #000000;
   cursor: pointer;
   margin: 3px;
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: 0.5px;
 }
 
@@ -100,10 +100,15 @@ nav .menu-lists li:is(:hover, .active) {
   /* border: 1px dashed #2E4374; */
 }
 
+/* Menu icon */
 nav :is(.fa-bars, .fa-xmark) {
   color: #0B2446;
-  font-size: 24px;
+  font-size: 30px;
   display: none;
+}
+
+.fa-bars:hover {
+  color: #333;
 }
 
 /* Submenu Section */
@@ -409,9 +414,9 @@ nav :is(.fa-bars, .fa-xmark) {
 
 /* Search styles */
 .search {
-  width: 95%;
+  width: 40vh;
   margin: 20px auto;
-  height: 40px;
+  height: 35px;
   background: white;
   display: flex;
   align-items: center;
@@ -427,13 +432,14 @@ nav :is(.fa-bars, .fa-xmark) {
   outline: none;
   background: transparent;
   padding: 0 10px;
-  font-size: 0.85rem;
+  font-size: 1rem;
 }
 
 .search button {
   border: none;
   outline: none;
-  background: linear-gradient(to right, #525CEB, #2b7ddf);
+  /* background: linear-gradient(to right, #525CEB, #2b7ddf); */
+  background-color: #525CEB;
   width: 20%;
   height: 100%;
   color: #fff;
@@ -667,7 +673,7 @@ nav :is(.fa-bars, .fa-xmark) {
 }
 
 .pagination .numbers li:is(:hover, .active) {
-  background: #525CEB;
+  background: #ff695e;
   color: #fff;
 }
 
@@ -874,10 +880,12 @@ footer {
   text-align: center;
 }
 
-.the-team-link {
+.portfolio {
   color: #525CEB;
   align-items: center;
   display: flex;
+  margin-top: 20px;
+  font-size: 1.2rem;
 }
 
 /* Media Query for mobile screens */
@@ -901,8 +909,7 @@ footer {
     background-color: #525CEB;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    font-size: 1.2rem;
+    /* justify-content: space-around; */
     overflow-y: scroll;
     transition: left 0.3s ease-in-out;
     border-radius: 0 0 10px 10px;
@@ -911,11 +918,15 @@ footer {
   /* Show the close (X) icon */
   nav .fa-xmark {
     display: block;
-    font-size: 1.5rem;
+    font-size: 2rem;
     cursor: pointer;
     position: absolute;
-    top: 10px;
+    top: 15px;
     right: 20px;
+  }
+
+  .fa-xmark:hover {
+    color: white;
   }
 
   /* When the menu button is checked, display the menu */
@@ -929,8 +940,9 @@ footer {
   }
 
   nav .menu-lists li {
-    margin: 5px 0;
+    margin: 10px 0;
     padding: 0;
+    font-size: 1.5rem;
   }
 
   /* Adjust submenu item styles if needed */
